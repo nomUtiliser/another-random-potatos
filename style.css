@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #2c1e0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#potato-container {
+    text-align: center;
+}
+
+#potato-btn {
+    font-size: 120px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    user-select: none;
+    outline: none;
+}
+
+#potato-btn:hover {
+    transform: scale(1.1);
+}
+
+#potato-btn:active {
+    transform: scale(0.95);
+}
+
+.potato-flood {
+    position: fixed;
+    font-size: 40px;
+    pointer-events: none;
+    animation: fall linear forwards;
+    z-index: 999;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-60px) rotate(0deg);
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0.3;
+    }
+}
